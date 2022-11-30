@@ -1,0 +1,220 @@
+:root {
+    --primary-color: #f8d3c5;
+    --secondary-color: #fceee9;
+    --tertiary-color: #dde6d5;
+    --quaternary-color: #a3b899;
+    --quinary-color: #667b68;
+    --text-color: rgb(252, 251, 243);
+    --font-family: font-family:Gill Sans, sans-serif;
+}
+
+html,
+body {
+    background-color: var(--tertiary-color);
+    font-family: var(--font-family);
+}
+
+header {
+    padding: 20px 0;
+    background-color: var(--quaternary-color);
+    justify-content: stretch;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+}
+
+header nav ul li a:hover {
+    background: var(--text-color);
+    color: var(--quinary-color);
+    border-radius: 15px;
+    letter-spacing: 1em;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 4em;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    padding: 1%; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    position: -webkit-sticky;
+    position: sticky; 
+    top: -1px; 
+}
+
+.hello {
+    color: var(--text-color);
+}
+
+.hello h1 {
+    background-color: var(--quinary-color);
+}
+
+.hello p{
+    font-size: 3em; 
+    align-content: center;
+}
+
+.about {
+    color: var(--text-color); 
+}
+
+.about h1 {
+    background-color: var(--quaternary-color); 
+}
+
+.about p {
+    font-size: 18px; 
+    font-weight: lighter; 
+    letter-spacing: 1px;
+}
+
+.projects {
+    color: var(--text-color); 
+}
+
+.projects h1 {
+    background-color: var(--quaternary-color); 
+}
+
+.contact-content {
+    background: var(--quaternary-color);
+    color: var(--secondary-color);
+    padding: 100px 0 15px 50px;
+}
+
+.contact-content a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.contact-content nav {
+    margin: 10% 0 0 0;
+}
+
+.contact-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.contact-content nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+}
+
+.contact-content nav ul li a:hover {
+    background: var(--text-color);
+    color: var(--quinary-color);
+    border-radius: 15px;
+    letter-spacing: 1em;
+}
+
+footer {
+    color: var(--text-color); 
+    background: var(--quaternary-color);
+    width: 100%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    .intro-img {
+        width: 80%;
+    }
+
+    .intro {
+        flex: 0 70%;
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .section {
+            padding: 30px 15px;
+        }
+
+        .intro-img {
+            flex: 0 32%;
+            margin-right: 0;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .about-text {
+            flex: 100%;
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        .intro {
+            width: 95%;
+        }
+
+        .intro p {
+            width: 100%;
+        }
+
+        .content-projects {
+            flex: 0 100%;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info>* {
+            flex: 0 100%;
+        }
+    }
+}
